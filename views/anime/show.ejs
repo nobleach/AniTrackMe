@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="utf-8" />
+    <title> AniTrackMe | <%=anime.data.title %></title>
+  </head>
+  <body>
+    <h1><%= anime.data.title%></h1>
+    <h2>Score: <%= anime.data.score %>/10</h2>
+    <img src="<%=anime.data.images.jpg.large_image_url%>" alt="">
+    <p>Synopsis: <%=anime.data.synopsis%></p>
+  </body>
+</html>

@@ -13,4 +13,26 @@ router.get('/', (req, res) => {
     });
 });
 
+//NEW
+
+//DELETE
+
+//UPDATE
+
+//CREATE
+
+//EDIT
+
+//SHOW
+router.get('/:id', (req, res) =>
+    fetch(`https://api.jikan.moe/v4/anime/${req.params.id}`)
+    .then((response) => response.json())
+    .then((data) => {
+        res.render('anime/show.ejs', {
+            anime: data,
+        })
+    })
+//render show/ make show page
+)
+
 module.exports = router
