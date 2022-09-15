@@ -13,6 +13,10 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/search', (req, res) => {
+    res.render('anime/search.partial.ejs');
+});
+
 //NEW
 
 //DELETE
@@ -28,7 +32,6 @@ router.get('/:id', (req, res) =>
     fetch(`https://api.jikan.moe/v4/anime/${req.params.id}`)
     .then((response) => response.json())
     .then((data) => {
-        console.log("title", data.data.title);
         res.render('anime/show.ejs', {
             anime: data,
         })
